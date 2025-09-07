@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>دليل مبسّط عن مرض السكري (2025)</title>
+  <meta name="description" content="صفحة عربية مبسّطة تشرح مرض السكري بأنواعه مع أرقام دقيقة، معايير التشخيص، عوامل الخطورة، الوقاية، والأهداف العلاجية." />
+  <style>
+    :root{
+      --bg:#0f172a;      /* slate-900 */
+      --panel:#111827;   /* gray-900 */
+      --ink:#e5e7eb;     /* gray-200 */
+      --muted:#94a3b8;   /* slate-400 */
+      --accent:#06b6d4;  /* cyan-500 */
+      --good:#10b981;    /* emerald-500 */
+      --warn:#f59e0b;    /* amber-500 */
+      --danger:#ef4444;  /* red-500 */
+      --card:#0b1222;
+      --radius:18px;
+    }
+    html,body{height:100%}
+    body{
+      margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Kufi Arabic", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+      background: radial-gradient(1200px 800px at 80% -10%, #0b2540 0%, var(--bg) 55%), var(--bg);
+      color:var(--ink);
+      line-height:1.8;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{ text-decoration:underline }
+    header{
+      position:sticky; top:0; z-index:5; backdrop-filter:saturate(180%) blur(8px);
+      background: linear-gradient(180deg, rgba(11,18,34,.9), rgba(11,18,34,.6));
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .container{max-width:1100px; margin-inline:auto; padding:18px 16px}
+    .brand{display:flex; gap:10px; align-items:center}
+    .brand .logo{width:38px; height:38px; border-radius:10px; display:grid; place-items:center; background:linear-gradient(135deg, var(--accent), #1d4ed8)}
+    .brand strong{font-size:1.1rem}
+    nav{display:flex; gap:14px; flex-wrap:wrap}
+    nav a{font-size:.95rem; color:var(--muted)}
+
+    .hero{padding:44px 0 10px}
+    .hero h1{font-size:clamp(1.6rem,3vw,2.2rem); margin:0 0 10px;}
+    .hero p{margin:0; color:var(--muted)}
+
+    .kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:18px 0 0}
+    .kpi{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); padding:16px}
+    .kpi h3{margin:0; font-size:1.8rem}
+    .kpi p{margin:6px 0 0; color:var(--muted)}
+
+    section{margin:28px 0}
+    h2{font-size:1.3rem; margin:0 0 10px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); padding:18px}
+
+    .grid{display:grid; gap:14px}
+    .cols-2{grid-template-columns:repeat(2,1fr)}
+    .cols-3{grid-template-columns:repeat(3,1fr)}
+    @media (max-width:900px){ .kpis{grid-template-columns:1fr} .cols-2,.cols-3{grid-template-columns:1fr} }
+
+    .tag{display:inline-block; padding:.2rem .6rem; border-radius:999px; font-size:.8rem; border:1px solid rgba(255,255,255,.12); color:var(--muted)}
+    .ok{color:var(--good)} .warn{color:var(--warn)} .bad{color:var(--danger)}
+
+    table{width:100%; border-collapse:separate; border-spacing:0; overflow:hidden; border-radius:14px; border:1px solid rgba(255,255,255,.06)}
+    th,td{padding:12px; text-align:right}
+    thead th{background:rgba(255,255,255,.05); font-weight:600}
+    tbody tr:nth-child(odd){background:rgba(255,255,255,.02)}
+
+    .note{color:var(--muted); font-size:.92rem}
+    footer{margin:30px 0 60px; color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v7h-7"/></svg>
+        </div>
+        <strong>دليل السكري</strong>
+      </div>
+      <nav aria-label="روابط الأقسام">
+        <a href="#about">عن السكري</a>
+        <a href="#types">الأنواع</a>
+        <a href="#diagnosis">التشخيص</a>
+        <a href="#risk">عوامل الخطورة</a>
+        <a href="#prevention">الوقاية</a>
+        <a href="#targets">الأهداف العلاجية</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>مرض السكري — نظرة سريعة مع أرقام دقيقة (تحديث 2025)</h1>
+      <p>هذا الدليل المبسّط يعرّف بالسكري، يوضح الأنواع ومعايير التشخيص بالأرقام (mg/dL و mmol/L)، ويعرض عوامل الخطورة، الوقاية، والأهداف العلاجية الشائعة.</p>
+
+      <div class="kpis" role="list" aria-label="مؤشرات عالمية مختصرة">
+        <div class="kpi" role="listitem">
+          <h3>589<span style="font-size:.9rem"> مليون</span></h3>
+          <p>بالغ (20–79 سنة) يعيشون مع السكري عالميًا في 2024 —≈ 1 من كل 9.</p>
+        </div>
+        <div class="kpi" role="listitem">
+          <h3>3.4<span style="font-size:.9rem"> مليون</span></h3>
+          <p>وفاة منسوبة للسكري في 2024 (≈ وفاة كل 9 ثوانٍ).</p>
+        </div>
+        <div class="kpi" role="listitem">
+          <h3>853<span style="font-size:.9rem"> مليون</span></h3>
+          <p>متوقّع بحلول 2050 (≈ 1 من كل 8 بالغين).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h2>ما هو السكري؟</h2>
+      <p>السكري مجموعة اضطرابات يحدث فيها <strong>ارتفاع مزمن لسكر الدم</strong> بسبب نقص الإنسولين، أو مقاومة الخلايا له، أو كلاهما. الارتفاع المزمن قد يؤدي لمضاعفات تصيب العينين، الكلى، الأعصاب، والقلب والأوعية الدموية.</p>
+    </section>
+
+    <section id="types" class="grid cols-2">
+      <div class="card">
+        <h2>النوع الأول (T1D)</h2>
+        <p>ينتج عن تخرّب مناعي ذاتي لخلايا البنكرياس المُفرِزة للإنسولين. يحتاج معظم المرضى إلى <strong>الإنسولين مدى الحياة</strong>.</p>
+        <span class="tag">غالبًا عند صغار السن</span>
+      </div>
+      <div class="card">
+        <h2>النوع الثاني (T2D)</h2>
+        <p>الأكثر شيوعًا (حوالي <strong>90–95%</strong> من الحالات). يتميز بمقاومة الإنسولين، ويترافق مع العمر، السمنة، والخمول البدني.</p>
+        <span class="tag">قد يُضبط بنمط الحياة + أدوية</span>
+      </div>
+      <div class="card">
+        <h2>السكري الحملي (GDM)</h2>
+        <p>ارتفاع سكر الدم خلال الحمل. يُقدَّر أنه يصيب نحو <strong>1 من كل 6</strong> مواليد أحياء عالميًا (≈ <strong>15–16%</strong> من الحمول). يرفع خطر سكري النوع الثاني لاحقًا للأم.</p>
+        <span class="tag">فحص بين الأسبوع 24–28 عادةً</span>
+      </div>
+      <div class="card">
+        <h2>مقدمات السكري</h2>
+        <p>قيم سكر أعلى من الطبيعي وأقل من العتبات التشخيصية للسكري. فرصة التحول للنمط الثاني مرتفعة، لكن يمكن <strong>تأخير/منع</strong> ذلك بتعديلات نمط الحياة.</p>
+        <span class="tag ok">قابلة للعكس أحيانًا</span>
+      </div>
+    </section>
+
+    <section id="diagnosis" class="card">
+      <h2>معايير التشخيص بالأرقام</h2>
+      <p class="note">المعايير أدناه معتمدة على إرشادات الجمعيات العلمية الحديثة. يُفضَّل تأكيد التشخيص بإعادة الاختبار في يومٍ آخر إذا لم تكن هناك أعراض واضحة.</p>
+      <div class="grid cols-2" style="margin-top:10px">
+        <div>
+          <h3 style="margin-top:0">السكري</h3>
+          <table aria-label="جدول معايير تشخيص السكري">
+            <thead>
+              <tr><th>الاختبار</th><th>الحد التشخيصي</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>الهيموغلوبين السكري (A1C)</td><td><strong>≥ 6.5%</strong> (≥ 48 mmol/mol)</td></tr>
+              <tr><td>سكر صائم (FPG)</td><td><strong>≥ 126 mg/dL</strong> (≥ 7.0 mmol/L)</td></tr>
+              <tr><td>سكر بعد ساعتين من OGTT (75g)</td><td><strong>≥ 200 mg/dL</strong> (≥ 11.1 mmol/L)</td></tr>
+              <tr><td>سكر عشوائي مع أعراض كلاسيكية</td><td><strong>≥ 200 mg/dL</strong> (≥ 11.1 mmol/L)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h3 style="margin-top:0">مقدمات السكري</h3>
+          <table aria-label="جدول معايير مقدمات السكري">
+            <thead>
+              <tr><th>الاختبار</th><th>المدى</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>A1C</td><td><strong>5.7–6.4%</strong> (39–47 mmol/mol)</td></tr>
+              <tr><td>سكر صائم (FPG)</td><td><strong>100–125 mg/dL</strong> (5.6–6.9 mmol/L)</td></tr>
+              <tr><td>بعد ساعتين من OGTT</td><td><strong>140–199 mg/dL</strong> (7.8–11.0 mmol/L)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="note" style="margin-top:10px">الفحص الدوري: يُوصى ببدء الفحص لمعظم البالغين اعتبارًا من عمر <strong>35 سنة</strong>؛ وإذا كانت النتائج طبيعية يُعاد الفحص كل <strong>3 سنوات</strong> على الأقل (بتكرار أكبر عند وجود عوامل خطورة).</p>
+    </section>
+
+    <section id="risk" class="grid cols-3">
+      <div class="card">
+        <h2>عوامل لا يمكن تغييرها</h2>
+        <ul>
+          <li>العمر (يزداد الخطر مع التقدم بالسن).</li>
+          <li>قصة عائلية من الدرجة الأولى.</li>
+          <li>العرق/الأصل وبعض الحالات الوراثية.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>عوامل قابلة للتعديل</h2>
+        <ul>
+          <li>زيادة الوزن/السمنة (خاصةً حول البطن).</li>
+          <li>الخمول البدني وقلة النوم.</li>
+          <li>التدخين والنظام الغذائي عالي السعرات/السكريات.</li>
+          <li>ضغط دم مرتفع ودهون مرتفعة غير مضبوطة.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>أعراض شائعة</h2>
+        <ul>
+          <li>عطش وتبوّل متكرر، جفاف فم.</li>
+          <li>إرهاق، تشوش الرؤية، نقص وزن غير مقصود.</li>
+          <li>التهاب/التئام جروح ببطء، خدر بالأطراف.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="prevention" class="card">
+      <h2>الوقاية وتقليل الخطر (بالأرقام)</h2>
+      <ul>
+        <li>برنامج نمط حياة مكثّف (نشاط بدني ≥ <strong>150 دقيقة/أسبوع</strong> + هدف <strong>خسارة وزن ~7%</strong>) قلّل حدوث النوع الثاني بنسبة <strong>≈58%</strong> لدى ذوي مقدمات السكري.</li>
+        <li>النشاط اليومي: حاول المشي السريع ~30 دقيقة/اليوم، 5 أيام بالأسبوع، وأضِف تمارين مقاومة مرتين أسبوعيًا.</li>
+        <li>أهداف وزن واقعية: خفض <strong>5–10%</strong> من الوزن المبدئي يُحسّن الحساسية للإنسولين وضغط الدم والدهون.</li>
+        <li>الغذاء: قلّل السكريات المضافة والمشروبات المحلّاة، اختر أليافًا أعلى وبروتينًا كافيًا ودهونًا صحية.</li>
+        <li>الإقلاع عن التدخين، وتحسين النوم (7–9 ساعات للبالغين) لدعم التحكم الأيضي.</li>
+      </ul>
+    </section>
+
+    <section id="targets" class="card">
+      <h2>أهداف علاجية شائعة (يُفصِّلها طبيبك حسب حالتك)</h2>
+      <div class="grid cols-2">
+        <div>
+          <h3>الجلوكوز</h3>
+          <ul>
+            <li><strong>A1C &lt; 7%</strong> لمعظم البالغين غير الحوامل (قد تكون أهداف أعلى/أقل حسب العمر والمضاعفات وخطر نقص السكر).</li>
+            <li>قبل الوجبة: <strong>80–130 mg/dL</strong> (4.4–7.2 mmol/L).</li>
+            <li>بعد الوجبة (1–2 ساعة): أقل من <strong>180 mg/dL</strong> (&lt; 10.0 mmol/L).</li>
+          </ul>
+        </div>
+        <div>
+          <h3>ضغط الدم والدهون</h3>
+          <ul>
+            <li>لمن لديهم ارتفاع ضغط: <strong>&lt; 130/80 mmHg</strong> هدف شائع.</li>
+            <li>الدهون: يوصى عادةً بالستاتين وفق الخطورة القلبية الوعائية الفردية.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">تنبيه: هذه أهداف عامة؛ قد تختلف مع التقدّم بالعمر، الحمل، الأمراض المرافقة، وتاريخ نقص السكر.</p>
+    </section>
+
+    <section class="card">
+      <h2>متى أراجع الطبيب فورًا؟</h2>
+      <ul>
+        <li>عطش شديد وتبوّل مفرط مع غثيان/إقياء أو ألم بطني/تنفّس سريع — اشتباه <strong>حماض كيتوني سكري</strong>.</li>
+        <li>سكر عشوائي متكرر فوق <strong>300 mg/dL</strong> أو أعراض نقص سكر (تعرّق، رجفان، تشوش) لا تتحسّن بسرعة.</li>
+        <li>حامل مع قراءات مرتفعة متكررة.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>⚠️ <strong>تنبيه مهم:</strong> هذه المعلومات للتثقيف الصحي ولا تغني عن استشارة الطبيب.</p>
+      <p class="note">مذكور داخل الصفحة أرقام حديثة ومعايير من منظمات علمية دولية (2024–2025). يمكن إضافة قسم خاص بإحصاءات بلدك عند الحاجة.</p>
+    </footer>
+
+
+<script> window.chtlConfig = { chatbotId: "2747784785" } </script>
+<script async data-id="2747784785" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+  </main>
+</body>
+</html>
